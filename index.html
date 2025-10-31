@@ -6,67 +6,80 @@
   <title>WCCI 2026 Special Session | Secure, Fair, and Privacy-Preserving Optimization and Learning</title>
   <meta name="description" content="WCCI 2026 Special Session on Secure, Fair, and Privacy-Preserving Optimization and Learning. Topics include federated optimization, fairness-aware learning, privacy-preserving methods, robustness, and multi-agent systems." />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.14/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root { --ring: 0 0% 100%; }
     html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
     .prose ul { list-style: disc; padding-left: 1.5rem; }
     .prose ol { list-style: decimal; padding-left: 1.5rem; }
-    .badge {  }
-    .glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); }
+    .glass { background: rgba(255,255,255,0.75); backdrop-filter: saturate(140%) blur(10px); }
+    .chip { display:inline-flex; align-items:center; border-radius:9999px; padding:0.25rem 0.75rem; font-size:0.75rem; font-weight:600; }
+    .shine { position: relative; overflow: hidden; }
+    .shine::after { content: ""; position: absolute; inset: -150% -50% auto auto; width: 40%; transform: rotate(35deg); background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent); animation: shine 6s infinite; }
+    @keyframes shine { 0%{transform: translateX(-120%) rotate(35deg);} 100%{transform: translateX(250%) rotate(35deg);} }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
-  <header class="sticky top-0 z-50 border-b bg-white/90 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="#" class="text-lg font-semibold">WCCI 2026 • Special Session</a>
-      <nav class="hidden gap-6 md:flex">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#topics" class="hover:text-blue-600">Topics</a>
-        <a href="#organizers" class="hover:text-blue-600">Organizers</a>
-        <a href="#bios" class="hover:text-blue-600">Biographies</a>
-        <a href="#previous" class="hover:text-blue-600">Previous Editions</a>
-        <a href="#papers" class="hover:text-blue-600">Committed Papers</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
+  <header class="sticky top-0 z-50 border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      <a href="#" class="text-lg font-semibold tracking-tight">WCCI 2026 • Special Session</a>
+      <nav class="hidden gap-6 md:flex text-sm">
+        <a href="#about" class="hover:text-blue-700">About</a>
+        <a href="#topics" class="hover:text-blue-700">Topics</a>
+        <a href="#organizers" class="hover:text-blue-700">Organizers</a>
+        <a href="#bios" class="hover:text-blue-700">Biographies</a>
+        <a href="#previous" class="hover:text-blue-700">Previous</a>
+        <a href="#papers" class="hover:text-blue-700">Papers</a>
+        <a href="#contact" class="hover:text-blue-700">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="relative isolate bg-gradient-to-b from-blue-600 to-indigo-600 text-white">
-    <div class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-      <h1 class="text-3xl font-bold sm:text-5xl">Secure, Fair, and Privacy-Preserving Optimization and Learning</h1>
-      <p class="mt-4 max-w-3xl text-lg/7 text-blue-100">A Special Session at the IEEE World Congress on Computational Intelligence (WCCI) 2026</p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <span class="inline-flex items-center rounded-full border px-3 py-1 text-sm border-white/30 text-white">Federated Optimization</span>
-        <span class="inline-flex items-center rounded-full border px-3 py-1 text-sm border-white/30 text-white">Fairness-Aware Learning</span>
-        <span class="inline-flex items-center rounded-full border px-3 py-1 text-sm border-white/30 text-white">Privacy-Preserving Methods</span>
-        <span class="inline-flex items-center rounded-full border px-3 py-1 text-sm border-white/30 text-white">Security & Robustness</span>
-        <span class="inline-flex items-center rounded-full border px-3 py-1 text-sm border-white/30 text-white">Multi-Agent Systems</span>
-      </div>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#topics" class="rounded-xl bg-white px-5 py-3 font-medium text-blue-700 shadow hover:shadow-md">Explore Topics</a>
-        <a href="#contact" class="rounded-xl border border-white/30 px-5 py-3 font-medium text-white hover:bg-white/10">Get in Touch</a>
+  <section class="relative isolate">
+    <div class="absolute inset-0 -z-10">
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop" alt="Abstract network security visualization" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/50 to-slate-900/80"></div>
+      <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-50"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 pb-24 pt-20 text-white">
+      <div class="max-w-3xl">
+        <p class="chip bg-white/10 ring-1 ring-white/20">IEEE World Congress on Computational Intelligence (WCCI) 2026</p>
+        <h1 class="mt-5 text-4xl font-extrabold tracking-tight sm:text-6xl">Secure, Fair, and Privacy‑Preserving Optimization and Learning</h1>
+        <p class="mt-5 text-lg text-blue-100">Bridging evolutionary computation, neural networks, and fuzzy systems to build trustworthy and sustainable collaborative ecosystems.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <span class="chip glass ring-1 ring-white/20 text-white">Federated Optimization</span>
+          <span class="chip glass ring-1 ring-white/20 text-white">Fairness‑Aware Learning</span>
+          <span class="chip glass ring-1 ring-white/20 text-white">Privacy‑Preserving Methods</span>
+          <span class="chip glass ring-1 ring-white/20 text-white">Security & Robustness</span>
+          <span class="chip glass ring-1 ring-white/20 text-white">Multi‑Agent Systems</span>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#topics" class="shine inline-flex items-center rounded-xl bg-white px-5 py-3 font-semibold text-slate-900 shadow-sm transition hover:shadow">Explore Topics</a>
+          <a href="#contact" class="inline-flex items-center rounded-xl border border-white/30 px-5 py-3 font-semibold text-white transition hover:bg-white/10">Get in Touch</a>
+        </div>
       </div>
     </div>
-    <svg class="absolute inset-x-0 bottom-0 -mb-1 h-8 w-full text-white" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
-      <path fill="currentColor" d="M0,0 C240,60 480,60 720,0 C960,-60 1200,-60 1440,0 L1440,60 L0,60 Z"></path>
-    </svg>
   </section>
 
-  <section id="about" class="mx-auto max-w-6xl px-4 py-12">
-    <div class="grid items-start gap-8 md:grid-cols-5">
+  <section id="about" class="mx-auto max-w-7xl px-4 py-14">
+    <div class="grid items-start gap-10 md:grid-cols-5">
       <div class="md:col-span-3">
-        <h2 class="text-2xl font-semibold">Abstract</h2>
+        <h2 class="text-2xl font-semibold tracking-tight">Abstract</h2>
         <div class="prose mt-4 max-w-none prose-slate">
           <p>Modern computational intelligence applications increasingly operate in distributed environments where data is scattered across multiple edge devices and organizations. This distributed paradigm offers unprecedented computational power and data diversity. However, it also introduces critical challenges in security, privacy protection, and fairness—issues that traditional optimization and learning methods were not designed to address. Growing concerns about data security, regulatory requirements (e.g., GDPR, CCPA), and stakeholder equity call for a fundamental rethinking of optimization and learning approaches. Developing new secure, privacy-preserving, and fairness-aware optimization and learning paradigms is essential to leverage distributed computing and storage while safeguarding sensitive information, preventing malicious attacks, and ensuring equitable outcomes for all participants.</p>
-          <p>In recent years, federated learning has emerged as a popular machine learning paradigm that enables the use of distributed data without leaking sensitive information. Federated learning builds global models by aggregating local models trained separately on different devices using local data. Yet, security and privacy-preserving optimization have received considerably less attention, particularly for evolutionary and data-driven approaches commonly used in many real-world optimization scenarios. Furthermore, data-driven optimization can be affected by data or algorithmic bias, producing unfair results with serious consequences. When objective function values correlate with tangible rewards (e.g., financial gains, resource allocation, or career opportunities), stakeholders may hesitate to participate in collaborative optimization if benefits are disproportionately distributed or if the system is vulnerable to adversarial manipulation. These factors present unique security and fairness challenges distinct from those in classification or prediction tasks, highlighting the need for secure, privacy-preserving, and fairness-aware optimization techniques to build trustworthy and sustainable collaborative ecosystems.</p>
-          <p>This special session aims to bring together researchers and practitioners to advance the state-of-the-art in secure, fair, and privacy-preserving optimization and learning. We seek to foster intradisciplinary collaboration across evolutionary computation, neural networks, and fuzzy systems communities to develop novel algorithms that simultaneously optimize performance, ensure security against adversarial threats, protect privacy, and guarantee fairness. The session will provide a platform to discuss theoretical foundations, algorithmic innovations, practical implementations, evaluation methods, and real-world applications of these paradigms.</p>
+          <p>In recent years, federated learning has emerged as a popular machine learning paradigm that enables the use of distributed data without leaking sensitive information. Federated learning builds global models by aggregating local models trained separately on different devices using local data. Yet, security and privacy-preserving optimization have received considerably less attention, particularly for evolutionary and data-driven approaches commonly used in many real-world optimization scenarios. Furthermore, data-driven optimization can be affected by data or algorithmic bias, producing unfair results with serious consequences. When objective function values correlate with tangible rewards, stakeholders may hesitate to participate in collaborative optimization if benefits are disproportionately distributed or if the system is vulnerable to adversarial manipulation.</p>
+          <p>This special session aims to bring together researchers and practitioners to advance the state of the art in secure, fair, and privacy‑preserving optimization and learning. We seek to foster intradisciplinary collaboration across evolutionary computation, neural networks, and fuzzy systems communities to develop novel algorithms that simultaneously optimize performance, ensure security, protect privacy, and guarantee fairness.</p>
         </div>
       </div>
       <aside class="md:col-span-2">
-        <div class="glass rounded-2xl border p-5 shadow-sm">
+        <div class="glass rounded-2xl border p-6 shadow-sm">
           <h3 class="text-lg font-semibold">At a Glance</h3>
           <dl class="mt-3 space-y-2 text-sm">
             <div class="flex justify-between"><dt class="text-slate-600">Event</dt><dd class="font-medium">IEEE WCCI 2026</dd></div>
-            <div class="flex justify-between"><dt class="text-slate-600">Session</dt><dd class="font-medium">Secure, Fair, and Privacy-Preserving Optimization and Learning</dd></div>
+            <div class="flex justify-between"><dt class="text-slate-600">Session</dt><dd class="font-medium">Secure, Fair, and Privacy‑Preserving Optimization and Learning</dd></div>
             <div class="flex justify-between"><dt class="text-slate-600">Tracks</dt><dd class="font-medium">EC • NN • Fuzzy</dd></div>
           </dl>
         </div>
@@ -75,169 +88,32 @@
   </section>
 
   <section id="topics" class="border-t bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-2xl font-semibold">Topics of Interest</h2>
-      <p class="mt-2 text-slate-600">Including but not limited to the following. Duplicates in the provided call have been consolidated.</p>
-      <div class="mt-6 grid gap-6 md:grid-cols-3">
-        <div class="rounded-2xl border bg-slate-50 p-5">
-          <h3 class="font-semibold">Security-Focused</h3>
-          <ul class="mt-3 list-disc pl-5 text-sm leading-6">
+    <div class="mx-auto max-w-7xl px-4 py-14">
+      <h2 class="text-2xl font-semibold tracking-tight">Topics of Interest</h2>
+      <p class="mt-2 text-slate-600">Including but not limited to the following.</p>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border bg-gradient-to-br from-slate-50 to-white p-6 shadow-sm">
+          <h3 class="font-semibold">Security‑Focused</h3>
+          <ul class="mt-3 list-disc pl-5 text-sm leading-7">
             <li>Secure federated optimization and learning</li>
-            <li>Secure multi-party computation for optimization</li>
-            <li>Byzantine-robust distributed optimization</li>
+            <li>Secure multi‑party computation for optimization</li>
+            <li>Byzantine‑robust distributed optimization</li>
             <li>Adversarial robustness beyond Byzantine attacks</li>
           </ul>
         </div>
-        <div class="rounded-2xl border bg-slate-50 p-5">
-          <h3 class="font-semibold">Fairness-Focused</h3>
-          <ul class="mt-3 list-disc pl-5 text-sm leading-6">
-            <li>Fairness-aware federated optimization and learning</li>
-            <li>Fairness-aware multi-objective machine learning</li>
-            <li>Fairness-aware Bayesian and data-driven optimization</li>
-            <li>Fairness-aware multi- and many-objective optimization</li>
+        <div class="rounded-2xl border bg-gradient-to-br from-slate-50 to-white p-6 shadow-sm">
+          <h3 class="font-semibold">Fairness‑Focused</h3>
+          <ul class="mt-3 list-disc pl-5 text-sm leading-7">
+            <li>Fairness‑aware federated optimization and learning</li>
+            <li>Fairness‑aware multi‑objective machine learning</li>
+            <li>Fairness‑aware Bayesian and data‑driven optimization</li>
+            <li>Fairness‑aware multi‑ and many‑objective optimization</li>
             <li>Fair and efficient resource allocation in distributed systems</li>
           </ul>
         </div>
-        <div class="rounded-2xl border bg-slate-50 p-5">
-          <h3 class="font-semibold">Privacy-Focused</h3>
-          <ul class="mt-3 list-disc pl-5 text-sm leading-6">
-            <li>Privacy-preserving Bayesian and distributed optimization</li>
-            <li>Privacy-preserving evolutionary algorithms and data-driven optimization: trade-offs and metrics</li>
-            <li>Privacy–utility–fairness trade-off analysis and Pareto optimization</li>
-            <li>Metrics for evaluating secure, privacy-preserving, and fairness-aware optimization and learning</li>
-            <li>Multi-agent systems and collaborative optimizations</li>
-            <li>Networked multi-agent learning, graph-based federated learning, and network-aware optimizations</li>
-            <li>Heterogeneity in distributed learning</li>
-          </ul>
-        </div>
-      </div>
-      <details class="mt-8">
-        <summary class="cursor-pointer text-sm font-medium text-slate-700">Show consolidated numbered list</summary>
-        <ol class="prose mt-3 max-w-none prose-slate">
-          <li>Secure federated optimization and learning</li>
-          <li>Fairness-aware federated optimization and learning</li>
-          <li>Fairness-aware multi-objective machine learning</li>
-          <li>Privacy-preserving Bayesian and distributed optimization</li>
-          <li>Privacy-preserving evolutionary algorithm and data-driven optimization</li>
-          <li>Fairness-aware Bayesian and data-driven optimization</li>
-          <li>Fairness-aware multi- and many-objective optimization</li>
-          <li>Fair and efficient resource allocation in distributed systems</li>
-          <li>Secure multi-party computation for optimization</li>
-          <li>Byzantine-robust distributed optimization</li>
-          <li>Adversarial robustness beyond Byzantine attacks</li>
-          <li>Privacy–utility–fairness trade-off analysis and Pareto optimization</li>
-          <li>Metrics for evaluating secure, privacy-preserving, and fairness-aware optimization and learning</li>
-          <li>Multi-agent systems and collaborative optimizations</li>
-          <li>Networked multi-agent learning, graph-based federated learning, and network-aware optimizations</li>
-          <li>Heterogeneity in distributed learning</li>
-        </ol>
-      </details>
-    </div>
-  </section>
-
-  <section id="organizers" class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-2xl font-semibold">Organizers</h2>
-    <div class="mt-6 grid gap-6 md:grid-cols-3">
-      <article class="rounded-2xl border bg-white p-5 shadow-sm">
-        <h3 class="text-lg font-semibold">Dr. Xilu Wang</h3>
-        <p class="mt-1 text-sm text-slate-600">Computer Science Research Centre, University of Surrey, UK</p>
-        <p class="mt-1 text-sm"><a class="text-blue-600 hover:underline" href="mailto:wangxilu@surrey.ac.uk">wangxilu@surrey.ac.uk</a></p>
-      </article>
-      <article class="rounded-2xl border bg-white p-5 shadow-sm">
-        <h3 class="text-lg font-semibold">Dr. Lavanya Elluri</h3>
-        <p class="mt-1 text-sm text-slate-600">Subhani Department of Computer Information Systems, Texas A&amp;M University–Central Texas, USA</p>
-        <p class="mt-1 text-sm"><a class="text-blue-600 hover:underline" href="mailto:elluri@tamuct.edu">elluri@tamuct.edu</a></p>
-      </article>
-      <article class="rounded-2xl border bg-white p-5 shadow-sm">
-        <h3 class="text-lg font-semibold">Dr. Rajesh Murthy</h3>
-        <p class="mt-1 text-sm text-slate-600">Founder and Chief Advisor, GAPASK</p>
-        <p class="mt-1 text-sm"><a class="text-blue-600 hover:underline" href="mailto:rmurthy@gapask.com">rmurthy@gapask.com</a></p>
-      </article>
-    </div>
-  </section>
-
-  <section id="bios" class="border-t bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-2xl font-semibold">Biography of the Organizers</h2>
-      <div class="mt-6 space-y-6">
-        <article class="rounded-2xl border p-5">
-          <h3 class="text-lg font-semibold">Xilu Wang</h3>
-          <p class="mt-2 text-sm leading-7 text-slate-700">Xilu Wang is currently a Surrey Future Fellow, Bielefeld University, Germany. She obtained her Ph.D. in 2022, supervised by Prof. Yaochu Jin, with a thesis on “Bayesian Evolutionary Optimization for Heterogeneously Expensive Multi-objective Problems”. She was a Postdoctoral Fellow with Bielefeld University, Germany, from 2022 to 2024. She has published more than 36 papers in international journals and conferences. Her current research lines are Bayesian optimization, federated optimization, large language models and computational intelligence.</p>
-        </article>
-        <article class="rounded-2xl border p-5">
-          <h3 class="text-lg font-semibold">Dr. Lavanya Elluri</h3>
-          <p class="mt-2 text-sm leading-7 text-slate-700">Dr. Lavanya Elluri is an Assistant Professor of Computer Information Systems at the Texas A&amp;M University–Central Texas. She received a Ph.D. in Information Systems from the University of Maryland Baltimore County. She has worked for over a decade in the IT industry at reputed companies Infosys and REI Systems. She has led several projects at REI Systems and has extensive work experience with various databases and data warehousing technologies. She also has experience working on a wide range of data science and data analytics projects. Her research interests include Cybersecurity, Internet of Things, Semantic Web, Data privacy and Security, Text Mining, and Healthcare IT systems. Her research publications appeared in reputed venues such as Computers &amp; Security, IEEE Big Data, IEEE Cloud, IEEE Access, and Journal of Computer Information Systems. She is the principal investigator on the National Science Foundation (NSF) Research grant.</p>
-        </article>
-        <article class="rounded-2xl border p-5">
-          <h3 class="text-lg font-semibold">Dr. Rajesh Murthy</h3>
-          <p class="mt-2 text-sm leading-7 text-slate-700">Dr. Rajesh Murthy brings over three decades of ICT experience specializing in engineering secure and resilient software systems. His expertise encompasses integrating emergent technologies to drive business success and leading large-scale software systems evolution. Dr. Murthy's professional strengths lie in cross-functional collaboration, delivering robust solutions for complex computational challenges, and addressing modernization requirements in dynamic technological environments. His research interests focus on the intersection of software security, distributed systems architecture, and the practical implementation of privacy-preserving technologies in enterprise settings.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="previous" class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-2xl font-semibold">Previous Editions</h2>
-    <div class="mt-6 grid gap-6 md:grid-cols-3">
-      <a class="rounded-2xl border p-5 transition hover:shadow-md" href="https://xw00616.github.io/Fairness-aware-Federated-Optimization-and-Learning/index" target="_blank" rel="noopener noreferrer">
-        <h3 class="font-semibold">Workshop on Secure, Private, and Fair Federated Optimization and Learning</h3>
-        <p class="mt-1 text-sm text-slate-600">IEEE Conference on Artificial Intelligence 2025</p>
-      </a>
-      <a class="rounded-2xl border p-5 transition hover:shadow-md" href="https://shiqing-liu.github.io/WCCI2024-workshop/" target="_blank" rel="noopener noreferrer">
-        <h3 class="font-semibold">Workshop on Privacy-preserving and Fairness-aware Optimization</h3>
-        <p class="mt-1 text-sm text-slate-600">IEEE WCCI 2024, Yokohama, Japan</p>
-      </a>
-      <a class="rounded-2xl border p-5 transition hover:shadow-md" href="https://xw00616.github.io/" target="_blank" rel="noopener noreferrer">
-        <h3 class="font-semibold">Special Session on Security, Privacy Protection, and Fairness Optimization</h3>
-        <p class="mt-1 text-sm text-slate-600">IEEE CEC 2023, Chicago, USA</p>
-      </a>
-    </div>
-  </section>
-
-  <section id="papers" class="border-t bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-2xl font-semibold">Committed Papers</h2>
-      <div class="mt-6 grid gap-6 md:grid-cols-2">
-        <article class="rounded-2xl border p-5">
-          <h3 class="font-semibold">Secure Multi-Party Computation for Black-Box Optimization Problems</h3>
-          <p class="mt-1 text-sm text-slate-600">Homomorphic encryption techniques for privacy-preserving surrogate model construction — <span class="font-medium">Long Meng</span></p>
-        </article>
-        <article class="rounded-2xl border p-5">
-          <h3 class="font-semibold">Fairness-Aware Federated Multi-Objective Optimization</h3>
-          <p class="mt-1 text-sm text-slate-600">Ensuring equitable representation of all participants' preferences in federated MOO — <span class="font-medium">Xilu Wang</span></p>
-        </article>
-        <article class="rounded-2xl border p-5">
-          <h3 class="font-semibold">Differential Privacy Guarantees for Evolutionary Multi-Objective Optimization</h3>
-          <p class="mt-1 text-sm text-slate-600">Differential privacy is adopted to guarantee the privacy of data in multi-objective optimization — <span class="font-medium">Zijian Jiang</span></p>
-        </article>
-        <article class="rounded-2xl border p-5">
-          <h3 class="font-semibold">Graph Neural Network-Assisted Federated Optimization on Non-IID Data</h3>
-          <p class="mt-1 text-sm text-slate-600">Leveraging network topology for improved convergence in heterogeneous settings — <span class="font-medium">Rong Wan</span></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="mx-auto max-w-6xl px-4 py-12">
-    <div class="rounded-2xl border bg-slate-50 p-6">
-      <h2 class="text-2xl font-semibold">Contact</h2>
-      <p class="mt-3 text-sm text-slate-700">For inquiries about the special session, please contact any of the organizers via email.</p>
-      <div class="mt-4 grid gap-4 md:grid-cols-3">
-        <a class="rounded-xl border bg-white px-4 py-3 text-sm font-medium text-blue-700 hover:shadow" href="mailto:wangxilu@surrey.ac.uk">Email Dr. Xilu Wang</a>
-        <a class="rounded-xl border bg-white px-4 py-3 text-sm font-medium text-blue-700 hover:shadow" href="mailto:elluri@tamuct.edu">Email Dr. Lavanya Elluri</a>
-        <a class="rounded-xl border bg-white px-4 py-3 text-sm font-medium text-blue-700 hover:shadow" href="mailto:rmurthy@gapask.com">Email Dr. Rajesh Murthy</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="border-t bg-white/70">
-    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
-      <p>&copy; <span id="y"></span> WCCI 2026 Special Session. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+        <div class="rounded-2xl border bg-gradient-to-br from-slate-50 to-white p-6 shadow-sm">
+          <h3 class="font-semibold">Privacy‑Focused</h3>
+          <ul class="mt-3 list-disc pl-5 text-sm leading-7">
+            <li>Privacy‑preserving Bayesian and distributed optimization</li>
+            <li>Privacy‑preserving evolutionary algorithms and data‑driven optimization</li>
+            <li>Privacy–utility–fairness trade‑off analysis and Pareto optimization</li>\n            <li>Metrics for evaluating secure, privacy‑preserving, and fairness‑aware optimization and learning</li>\n            <li>Multi‑agent systems and collaborative optimizations</li>\n            <li>Graph‑based federated learning and network‑aware optimizations</li>\n            <li>Heterogeneity in distributed learning</li>\n          </ul>\n        </div>\n      </div>\n      <details class=\"mt-8\">\n        <summary class=\"cursor-pointer text-sm font-medium text-slate-700\">Show consolidated numbered list</summary>\n        <ol class=\"prose mt-3 max-w-none prose-slate\">\n          <li>Secure federated optimization and learning</li>\n          <li>Fairness‑aware federated optimization and learning</li>\n          <li>Fairness‑aware multi‑objective machine learning</li>\n          <li>Privacy‑preserving Bayesian and distributed optimization</li>\n          <li>Privacy‑preserving evolutionary algorithm and data‑driven optimization</li>\n          <li>Fairness‑aware Bayesian and data‑driven optimization</li>\n          <li>Fairness‑aware multi‑ and many‑objective optimization</li>\n          <li>Fair and efficient resource allocation in distributed systems</li>\n          <li>Secure multi‑party computation for optimization</li>\n          <li>Byzantine‑robust distributed optimization</li>\n          <li>Adversarial robustness beyond Byzantine attacks</li>\n          <li>Privacy–utility–fairness trade‑off analysis and Pareto optimization</li>\n          <li>Metrics for evaluating secure, privacy‑preserving, and fairness‑aware optimization and learning</li>\n          <li>Multi‑agent systems and collaborative optimizations</li>\n          <li>Graph‑based federated learning and network‑aware optimizations</li>\n          <li>Heterogeneity in distributed learning</li>\n        </ol>\n      </details>\n    </div>\n  </section>\n\n  <section id=\"organizers\" class=\"mx-auto max-w-7xl px-4 py-14\">\n    <h2 class=\"text-2xl font-semibold tracking-tight\">Organizers</h2>\n    <div class=\"mt-6 grid gap-6 md:grid-cols-3\">\n      <article class=\"rounded-2xl border bg-white p-6 shadow-sm\">\n        <h3 class=\"text-lg font-semibold\">Dr. Xilu Wang</h3>\n        <p class=\"mt-1 text-sm text-slate-600\">Computer Science Research Centre, University of Surrey, UK</p>\n        <p class=\"mt-1 text-sm\"><a class=\"text-blue-700 hover:underline\" href=\"mailto:wangxilu@surrey.ac.uk\">wangxilu@surrey.ac.uk</a></p>\n      </article>\n      <article class=\"rounded-2xl border bg-white p-6 shadow-sm\">\n        <h3 class=\"text-lg font-semibold\">Dr. Lavanya Elluri</h3>\n        <p class=\"mt-1 text-sm text-slate-600\">Subhani Department of Computer Information Systems, Texas A&amp;M University–Central Texas, USA</p>\n        <p class=\"mt-1 text-sm\"><a class=\"text-blue-700 hover:underline\" href=\"mailto:elluri@tamuct.edu\">elluri@tamuct.edu</a></p>\n      </article>\n      <article class=\"rounded-2xl border bg-white p-6 shadow-sm\">\n        <h3 class=\"text-lg font-semibold\">Dr. Rajesh Murthy</h3>\n        <p class=\"mt-1 text-sm text-slate-600\">Founder and Chief Advisor, GAPASK</p>\n        <p class=\"mt-1 text-sm\"><a class=\"text-blue-700 hover:underline\" href=\"mailto:rmurthy@gapask.com\">rmurthy@gapask.com</a></p>\n      </article>\n    </div>\n  </section>\n\n  <section id=\"bios\" class=\"border-t bg-white\">\n    <div class=\"mx-auto max-w-7xl px-4 py-14\">\n      <h2 class=\"text-2xl font-semibold tracking-tight\">Biography of the Organizers</h2>\n      <div class=\"mt-6 space-y-6\">\n        <article class=\"rounded-2xl border p-6 bg-gradient-to-br from-white to-slate-50\">\n          <h3 class=\"text-lg font-semibold\">Xilu Wang</h3>\n          <p class=\"mt-2 text-sm leading-7 text-slate-700\">Xilu Wang is currently a Surrey Future Fellow, Bielefeld University, Germany. She obtained her Ph.D. in 2022, supervised by Prof. Yaochu Jin, with a thesis on “Bayesian Evolutionary Optimization for Heterogeneously Expensive Multi-objective Problems”. She was a Postdoctoral Fellow with Bielefeld University, Germany, from 2022 to 2024. She has published more than 36 papers in international journals and conferences. Her current research lines are Bayesian optimization, federated optimization, large language models and computational intelligence.</p>\n        </article>\n        <article class=\"rounded-2xl border p-6 bg-gradient-to-br from-white to-slate-50\">\n          <h3 class=\"text-lg font-semibold\">Dr. Lavanya Elluri</h3>\n          <p class=\"mt-2 text-sm leading-7 text-slate-700\">Dr. Lavanya Elluri is an Assistant Professor of Computer Information Systems at the Texas A&amp;M University–Central Texas. She received a Ph.D. in Information Systems from the University of Maryland Baltimore County. She has worked for over a decade in the IT industry at reputed companies Infosys and REI Systems. She has led several projects at REI Systems and has extensive work experience with various databases and data warehousing technologies. She also has experience working on a wide range of data science and data analytics projects. Her research interests include Cybersecurity, Internet of Things, Semantic Web, Data privacy and Security, Text Mining, and Healthcare IT systems. Her research publications appeared in reputed venues such as Computers &amp; Security, IEEE Big Data, IEEE Cloud, IEEE Access, and Journal of Computer Information Systems. She is the principal investigator on the National Science Foundation (NSF) Research grant.</p>\n        </article>\n        <article class=\"rounded-2xl border p-6 bg-gradient-to-br from-white to-slate-50\">\n          <h3 class=\"text-lg font-semibold\">Dr. Rajesh Murthy</h3>\n          <p class=\"mt-2 text-sm leading-7 text-slate-700\">Dr. Rajesh Murthy brings over three decades of ICT experience specializing in engineering secure and resilient software systems. His expertise encompasses integrating emergent technologies to drive business success and leading large-scale software systems evolution. Dr. Murthy's professional strengths lie in cross-functional collaboration, delivering robust solutions for complex computational challenges, and addressing modernization requirements in dynamic technological environments. His research interests focus on the intersection of software security, distributed systems architecture, and the practical implementation of privacy-preserving technologies in enterprise settings.</p>\n        </article>\n      </div>\n    </div>\n  </section>\n\n  <section id=\"previous\" class=\"mx-auto max-w-7xl px-4 py-14\">\n    <h2 class=\"text-2xl font-semibold tracking-tight\">Previous Editions</h2>\n    <div class=\"mt-6 grid gap-6 md:grid-cols-3\">\n      <a class=\"rounded-2xl border p-6 transition hover:shadow-md bg-white\" href=\"https://xw00616.github.io/Fairness-aware-Federated-Optimization-and-Learning/index\" target=\"_blank\" rel=\"noopener noreferrer\">\n        <h3 class=\"font-semibold\">Secure, Private, and Fair Federated Optimization and Learning</h3>\n        <p class=\"mt-1 text-sm text-slate-600\">IEEE Conference on AI 2025</p>\n      </a>\n      <a class=\"rounded-2xl border p-6 transition hover:shadow-md bg-white\" href=\"https://shiqing-liu.github.io/WCCI2024-workshop/\" target=\"_blank\" rel=\"noopener noreferrer\">\n        <h3 class=\"font-semibold\">Privacy‑preserving and Fairness‑aware Optimization</h3>\n        <p class=\"mt-1 text-sm text-slate-600\">IEEE WCCI 2024, Yokohama</p>\n      </a>\n      <a class=\"rounded-2xl border p-6 transition hover:shadow-md bg-white\" href=\"https://xw00616.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">\n        <h3 class=\"font-semibold\">Security, Privacy Protection, and Fairness Optimization</h3>\n        <p class=\"mt-1 text-sm text-slate-600\">IEEE CEC 2023, Chicago</p>\n      </a>\n    </div>\n  </section>\n\n  <section id=\"papers\" class=\"border-t bg-white\">\n    <div class=\"mx-auto max-w-7xl px-4 py-14\">\n      <h2 class=\"text-2xl font-semibold tracking-tight\">Committed Papers</h2>\n      <div class=\"mt-6 grid gap-6 md:grid-cols-2\">\n        <article class=\"rounded-2xl border p-6 bg-white shadow-sm\">\n          <h3 class=\"font-semibold\">Secure Multi‑Party Computation for Black‑Box Optimization Problems</h3>\n          <p class=\"mt-1 text-sm text-slate-600\">Homomorphic encryption techniques for privacy‑preserving surrogate model construction — <span class=\"font-medium\">Long Meng</span></p>\n        </article>\n        <article class=\"rounded-2xl border p-6 bg-white shadow-sm\">\n          <h3 class=\"font-semibold\">Fairness‑Aware Federated Multi‑Objective Optimization</h3>\n          <p class=\"mt-1 text-sm text-slate-600\">Ensuring equitable representation of all participants' preferences in federated MOO — <span class=\"font-medium\">Xilu Wang</span></p>\n        </article>\n        <article class=\"rounded-2xl border p-6 bg-white shadow-sm\">\n          <h3 class=\"font-semibold\">Differential Privacy Guarantees for Evolutionary Multi‑Objective Optimization</h3>\n          <p class=\"mt-1 text-sm text-slate-600\">Differential privacy is adopted to guarantee the privacy of data in multi‑objective optimization — <span class=\"font-medium\">Zijian Jiang</span></p>\n        </article>\n        <article class=\"rounded-2xl border p-6 bg-white shadow-sm\">\n          <h3 class=\"font-semibold\">GNN‑Assisted Federated Optimization on Non‑IID Data</h3>\n          <p class=\"mt-1 text-sm text-slate-600\">Leveraging network topology for improved convergence in heterogeneous settings — <span class=\"font-medium\">Rong Wan</span></p>\n        </article>\n      </div>\n    </div>\n  </section>\n\n  <section id=\"contact\" class=\"mx-auto max-w-7xl px-4 py-14\">\n    <div class=\"rounded-2xl border bg-slate-50 p-6\">\n      <h2 class=\"text-2xl font-semibold tracking-tight\">Contact</h2>\n      <p class=\"mt-3 text-sm text-slate-700\">For inquiries about the special session, please contact any of the organizers via email.</p>\n      <div class=\"mt-4 grid gap-4 md:grid-cols-3\">\n        <a class=\"rounded-xl border bg-white px-4 py-3 text-sm font-medium text-blue-700 hover:shadow\" href=\"mailto:wangxilu@surrey.ac.uk\">Email Dr. Xilu Wang</a>\n        <a class=\"rounded-xl border bg-white px-4 py-3 text-sm font-medium text-blue-700 hover:shadow\" href=\"mailto:elluri@tamuct.edu\">Email Dr. Lavanya Elluri</a>\n        <a class=\"rounded-xl border bg-white px-4 py-3 text-sm font-medium text-blue-700 hover:shadow\" href=\"mailto:rmurthy@gapask.com\">Email Dr. Rajesh Murthy</a>\n      </div>\n    </div>\n  </section>\n\n  <footer class=\"border-t bg-white/70\">\n    <div class=\"mx-auto max-w-7xl px-4 py-8 text-sm text-slate-600\">\n      <p>&copy; <span id=\"y\"></span> WCCI 2026 Special Session. All rights reserved.</p>\n    </div>\n  </footer>\n\n  <script>\n    document.getElementById('y').textContent = new Date().getFullYear();\n  </script>\n</body>\n</html>\n
