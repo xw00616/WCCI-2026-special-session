@@ -9,7 +9,7 @@
   <style>
     html { scroll-behavior: smooth; }
     :root {
-      /* 换图只改这里：找一张你喜欢的安全 / 隐私 / 网络 风格图片 */
+      /* 换图只改这里：选一张你喜欢的安全 / 隐私 / 网络 风格图片 */
       --hero-img: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
     }
     .prose ul { list-style: disc; padding-left: 1.5rem; }
@@ -88,7 +88,7 @@
         </div>
       </div>
 
-      <!-- Right side: image card + quick info -->
+      <!-- Right side: preview image + quick section cards -->
       <div class="w-full space-y-4 lg:w-2/5">
         <div class="glass rounded-2xl border border-slate-700 p-4 shadow-xl">
           <div class="overflow-hidden rounded-xl border border-slate-700/60">
@@ -105,25 +105,26 @@
             </p>
           </div>
         </div>
+        <!-- 这里三个卡片都是可点击的 “入口块” -->
         <div class="grid gap-4 text-xs text-slate-100 sm:grid-cols-3 lg:grid-cols-1">
-          <div class="rounded-2xl border border-sky-400/40 bg-sky-500/90 p-4 text-slate-950 shadow-md">
-            <p class="text-[0.65rem] font-semibold uppercase tracking-[0.2em]">Important dates</p>
-            <p class="mt-1 text-[0.8rem]">Follow the official IEEE WCCI 2026 schedule.</p>
-          </div>
-          <div class="rounded-2xl border border-slate-200/25 bg-slate-950/80 p-4 shadow-md">
-            <p class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-slate-300">Submission</p>
-            <p class="mt-1 text-[0.8rem] text-slate-200">Use the IEEE WCCI 2026 templates and select this special session in the system.</p>
-          </div>
-          <div class="rounded-2xl border border-slate-200/25 bg-slate-950/80 p-4 shadow-md">
+          <a href="#cfp" class="rounded-2xl border border-sky-400/40 bg-sky-500/90 p-4 text-slate-950 shadow-md transition hover:-translate-y-0.5 hover:shadow-lg">
+            <p class="text-[0.65rem] font-semibold uppercase tracking-[0.2em]">Call for Papers</p>
+            <p class="mt-1 text-[0.8rem]">Read the full motivation and scope.</p>
+          </a>
+          <a href="#dates" class="rounded-2xl border border-slate-200/25 bg-slate-950/80 p-4 shadow-md transition hover:-translate-y-0.5 hover:border-sky-400/60">
+            <p class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-slate-300">Important Dates</p>
+            <p class="mt-1 text-[0.8rem] text-slate-200">Follow the official IEEE WCCI 2026 schedule.</p>
+          </a>
+          <a href="#organizers" class="rounded-2xl border border-slate-200/25 bg-slate-950/80 p-4 shadow-md transition hover:-translate-y-0.5 hover:border-sky-400/60">
             <p class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-slate-300">Organizers</p>
-            <p class="mt-1 text-[0.8rem] text-slate-200">International team from academia and industry with expertise in optimization, security, and privacy.</p>
-          </div>
+            <p class="mt-1 text-[0.8rem] text-slate-200">Learn more about the organizing team.</p>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CFP -->
+  <!-- Call for Papers -->
   <section id="cfp" class="border-t border-slate-800 bg-slate-950">
     <div class="mx-auto max-w-6xl px-4 py-12">
       <div class="grid items-start gap-10 md:grid-cols-5">
@@ -163,12 +164,12 @@
     </div>
   </section>
 
-  <!-- Dates -->
+  <!-- Important dates（删掉竖线时间线，改成卡片） -->
   <section id="dates" class="border-t border-slate-800 bg-slate-950">
     <div class="mx-auto max-w-6xl px-4 py-12">
       <h2 class="text-2xl font-semibold tracking-tight text-slate-50">Important dates</h2>
       <p class="mt-2 text-sm text-slate-300">The special session follows the official IEEE WCCI 2026 timeline. Please always refer to the conference website for the latest updates.</p>
-      <div class="mt-6 grid gap-8 md:grid-cols-[2fr,3fr] md:items-start">
+      <div class="mt-6 grid gap-6 md:grid-cols-2 md:items-start">
         <div class="rounded-2xl border border-slate-800 bg-slate-950/80 p-5 text-sm text-slate-200">
           <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-400">Timeline overview</p>
           <p class="mt-3 text-[0.86rem] text-slate-200">Typical milestones are shown below for your convenience (exact dates are given by WCCI 2026).</p>
@@ -181,32 +182,27 @@
           </ul>
           <p class="mt-3 text-[0.8rem] text-slate-400">When submitting, please select this special session in the submission system so that your paper is considered within the correct track.</p>
         </div>
-        <div class="relative border-l border-slate-700 pl-8">
-          <div class="absolute left-0 top-2 h-2 w-2 -translate-x-1/2 rounded-full bg-sky-400 shadow shadow-sky-500/60"></div>
-          <div class="absolute left-0 top-1/3 h-2 w-2 -translate-x-1/2 rounded-full bg-sky-400/70"></div>
-          <div class="absolute left-0 top-2/3 h-2 w-2 -translate-x-1/2 rounded-full bg-sky-400/70"></div>
-          <div class="absolute left-0 bottom-2 h-2 w-2 -translate-x-1/2 rounded-full bg-sky-400"></div>
-          <div class="space-y-6 text-sm text-slate-200">
-            <div>
-              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-sky-400">Step 1</p>
-              <p class="mt-1 text-[0.9rem] font-medium text-slate-50">Prepare your manuscript</p>
-              <p class="mt-1 text-[0.82rem] text-slate-300">Use the official IEEE WCCI 2026 LaTeX or Word templates and follow the formatting instructions.</p>
-            </div>
-            <div>
-              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-sky-400">Step 2</p>
-              <p class="mt-1 text-[0.9rem] font-medium text-slate-50">Submit via the online system</p>
-              <p class="mt-1 text-[0.82rem] text-slate-300">Log in to the WCCI 2026 paper submission system and upload your manuscript.</p>
-            </div>
-            <div>
-              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-sky-400">Step 3</p>
-              <p class="mt-1 text-[0.9rem] font-medium text-slate-50">Select this special session</p>
-              <p class="mt-1 text-[0.82rem] text-slate-300">Under track/session selection, choose “Secure, Fair, and Privacy-Preserving Optimization and Learning”.</p>
-            </div>
-            <div>
-              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-sky-400">Step 4</p>
-              <p class="mt-1 text-[0.9rem] font-medium text-slate-50">Notification and registration</p>
-              <p class="mt-1 text-[0.82rem] text-slate-300">Upon acceptance, finalize your camera-ready paper and complete conference registration according to WCCI 2026 instructions.</p>
-            </div>
+        <!-- 右侧：四个 step 卡片，没有黑色竖线 -->
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-slate-800 bg-slate-950/80 p-4">
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-sky-400">Step 1</p>
+            <p class="mt-1 text-[0.9rem] font-medium text-slate-50">Prepare your manuscript</p>
+            <p class="mt-1 text-[0.82rem] text-slate-300">Use the official IEEE WCCI 2026 LaTeX or Word templates following the formatting instructions.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-950/80 p-4">
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-sky-400">Step 2</p>
+            <p class="mt-1 text-[0.9rem] font-medium text-slate-50">Submit via the system</p>
+            <p class="mt-1 text-[0.82rem] text-slate-300">Log in to the WCCI 2026 paper submission system and upload your manuscript.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-950/80 p-4">
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-sky-400">Step 3</p>
+            <p class="mt-1 text-[0.9rem] font-medium text-slate-50">Select this session</p>
+            <p class="mt-1 text-[0.82rem] text-slate-300">Choose “Secure, Fair, and Privacy-Preserving Optimization and Learning” in the track/session list.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-950/80 p-4">
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-sky-400">Step 4</p>
+            <p class="mt-1 text-[0.9rem] font-medium text-slate-50">Notification & registration</p>
+            <p class="mt-1 text-[0.82rem] text-slate-300">After acceptance, submit your camera-ready version and complete WCCI 2026 registration.</p>
           </div>
         </div>
       </div>
@@ -352,7 +348,7 @@
     </div>
   </section>
 
-  <!-- Previous -->
+  <!-- Previous editions -->
   <section id="previous" class="border-t border-slate-800 bg-slate-950">
     <div class="mx-auto max-w-6xl px-4 py-12">
       <h2 class="text-2xl font-semibold tracking-tight text-slate-50">Previous editions</h2>
